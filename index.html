@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="f.png" />
+
+</head>
+<body>
+  <h1>Typing Speed Game</h1>
+
+  <!-- Difficulty Mode -->
+  <div class="difficulty-select">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="1">Easy</option>
+      <option value="1.5" selected>Medium</option>
+      <option value="2">Hard</option>
+    </select>
+  </div>
+
+  <div class="game-area">
+    <div id="falling-word">Word</div>
+    <input type="text" id="typed-input" placeholder="Type here..." disabled />
+
+    <div class="stats">
+      <p>Score: <span id="score">0</span></p>
+      <p>Lives: <span id="lives">3</span></p>
+    </div>
+
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn" disabled>Stop</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popup-message">Game Over</p>
+      <button onclick="resetGame()">Play Again</button>
+    </div>
+  </div>
+
+<!-- 🎵 Background Music -->
+<audio id="bg-music" src="music/moonlit-groove.mp3" loop></audio>
+
+<div class="music-controls">
+  <button id="music-btn">🔊 Music On/Off</button>
+</div>
+
+
+  <script src="game.js"></script>
+</body>
+</html>
